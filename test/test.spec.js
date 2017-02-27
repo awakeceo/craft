@@ -1,4 +1,4 @@
-/*// Start with a webdriver instance:
+// Start with a webdriver instance:
 var sw = require('selenium-webdriver');
 var $ = require('jquery');
 var jq = require('chai-jquery');
@@ -14,7 +14,7 @@ var expect = chai.expect;
 var assert = chai.assert;
 var jsdom = require('mocha-jsdom');
 // And you're good to go!
-var actions = driver.actions();*/
+var actions = driver.actions();
 // jsdom();
 
 describe("Page globals", function(){
