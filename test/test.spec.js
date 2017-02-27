@@ -1,6 +1,5 @@
 // Start with a webdriver instance:
 var sw = require('selenium-webdriver');
-var $ = require('jquery');
 var jq = require('chai-jquery');
 var driver = new sw.Builder()
     .withCapabilities(sw.Capabilities.chrome())
@@ -15,7 +14,7 @@ var assert = chai.assert;
 var jsdom = require('mocha-jsdom');
 // And you're good to go!
 var actions = driver.actions();
-// jsdom();
+jsdom();
 
 describe("Page globals", function(){
     driver.get('localhost:3000');
