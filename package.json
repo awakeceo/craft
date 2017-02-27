@@ -17,6 +17,7 @@
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "chai-webdriver": "^1.2.0",
+    "chromedriver": "^2.27.3",
     "gulp-browserify": "^0.5.1",
     "gulp-live-server": "0.0.30",
     "gulp-mocha-phantomjs": "^0.12.1",

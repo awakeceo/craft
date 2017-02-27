@@ -1,6 +1,8 @@
 // Start with a webdriver instance:
 var sw = require('selenium-webdriver');
 var jq = require('chai-jquery');
+require('chromedriver');
+
 var driver = new sw.Builder()
     .withCapabilities(sw.Capabilities.chrome())
     .build();
