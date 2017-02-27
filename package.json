@@ -1,0 +1,35 @@
+{
+  "name": "craft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flexboxgrid-sass": "^8.0.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-jquery": "^2.0.0",
+    "chai-webdriver": "^1.2.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-live-server": "0.0.30",
+    "gulp-mocha-phantomjs": "^0.12.1",
+    "jsdom": "^9.11.0",
+    "karma": "^1.5.0",
+    "karma-chai": "^0.1.0",
+    "karma-chai-plugins": "^0.8.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-requirejs": "^1.1.0",
+    "mocha": "^3.2.0",
+    "mocha-jsdom": "^1.1.0",
+    "requirejs": "^2.3.3",
+    "selenium-webdriver": "^3.1.0"
+  }
+}

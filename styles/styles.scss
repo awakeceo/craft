@@ -1,0 +1,217 @@
+@import "../node_modules/flexboxgrid-sass/flexboxgrid";
+@import "modules/helpers";
+@import "modules/buttons";
+
+$brand-color: #430098;
+$heading-color: #79589F;
+$sub-color: #4A90E2;
+$black-color: #383E40;
+$hover-color: #8669a9;
+$sec-color: #d1d1dd;
+
+$menu-padding: 0.75rem;
+$menu-opacity: .8;
+
+@font-face {
+  font-family: 'Cormorant Infant';
+  src: url('../assets/fonts/hinted-subset-CormorantInfant-Bold.eot');
+  src: local('Cormorant Infant Bold'), local('CormorantInfant-Bold'),
+  url('../assets/fonts/hinted-subset-CormorantInfant-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/hinted-subset-CormorantInfant-Bold.woff2') format('woff2'),
+  url('../assets/fonts/hinted-subset-CormorantInfant-Bold.woff') format('woff'),
+  url('../assets/fonts/hinted-subset-CormorantInfant-Bold.ttf') format('truetype'),
+  url('../assets/fonts/hinted-subset-CormorantInfant-Bold.svg#CormorantInfant-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('../assets/fonts/hinted-subset-CaviarDreams-Bold.eot');
+  src: local('Caviar Dreams Bold'), local('CaviarDreams-Bold'),
+  url('../assets/fonts/hinted-subset-CaviarDreams-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/hinted-subset-CaviarDreams-Bold.woff2') format('woff2'),
+  url('../assets/fonts/hinted-subset-CaviarDreams-Bold.woff') format('woff'),
+  url('../assets/fonts/hinted-subset-CaviarDreams-Bold.ttf') format('truetype'),
+  url('../assets/fonts/hinted-subset-CaviarDreams-Bold.svg#CaviarDreams-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caviar Dreams';
+  src: url('../assets/fonts/hinted-subset-CaviarDreams.eot');
+  src: local('Caviar Dreams'), local('CaviarDreams'),
+  url('../assets/fonts/hinted-subset-CaviarDreams.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/hinted-subset-CaviarDreams.woff2') format('woff2'),
+  url('../assets/fonts/hinted-subset-CaviarDreams.woff') format('woff'),
+  url('../assets/fonts/hinted-subset-CaviarDreams.ttf') format('truetype'),
+  url('../assets/fonts/hinted-subset-CaviarDreams.svg#CaviarDreams') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 2vmin;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Caviar Dreams';
+  font-size: 0.85rem;
+  color: $black-color;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+  color: $heading-color;
+}
+
+.sub-product-title {
+  font-family: 'Cormorant Garamond';
+  font-weight: bold;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $sub-color;
+  border-left: 1px solid $sub-color;
+  padding-left: 0.5em;
+}
+
+nav {
+  //margin-top: $menu-padding;
+  //padding-left: $menu-padding;
+  //padding-right: $menu-padding;
+  padding: $menu-padding;
+  //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-bottom: 1px solid #e7ebf3;
+  //height: 3.5rem;
+  background-color: rgba(white, $menu-opacity);
+  ul > li {
+    margin-left: 1rem;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    a {
+      text-decoration: none;
+      color: $black-color;
+      transition: color 0.1s linear;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+  span {
+    color: #aaa;
+    //font-size: 0.8125rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+#lead {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background: url('../assets/img/heroku.png') no-repeat center;
+}
+
+#home {
+  height: 100%;
+  width: 100%;
+}
+
+#application-nav {
+  background-color: $sec-color;
+}
+
+.menu-horizontal.app-nav {
+  li {
+    margin-left: 1rem;
+    &:first-of-type {
+      a {
+        font-family: 'Cormorant Garamond';
+        font-weight: bold;
+        font-size: larger;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #6865a9;
+      transition: color 0.1s linear;
+      &:hover {
+        color: rgba(121,88,159,0.8);
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $sub-color;
+  font-weight: bold;
+  //padding: 0.5em;
+  &:hover {
+
+  }
+}
+
+li.has-dropdown {
+  &:hover {
+    > .dropdown {
+      //visibility: visible;
+      opacity: 1;
+      li {
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    height: 0.5em;
+    width: 0.75em;
+    margin-left: 5px;
+    background-image: url(../assets/img/caret-black.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    opacity: .5;
+  }
+  #main-sp {
+    stroke: black;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
+  border-radius: 0.25rem;
+  z-index: 3;
+  padding: 0.5rem 1rem;
+  padding-right: 0;
+  overflow: visible;
+  box-shadow: 0 2px 7px rgba(17,17,17,0.175);
+  margin-top: 0.25rem;
+  transition: visibility 0s 0.15s, opacity 0.15s, margin-top 0.15s, left 0.15s;
+  li {
+    float: none;
+    padding: 0;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.row, .col-xs-12 {
+  width: 100%;
+}
